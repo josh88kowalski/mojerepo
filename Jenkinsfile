@@ -13,6 +13,18 @@ pipeline {
         }
         stage('Test') {
             steps {
+                parallel(
+                    "TaskOne":{
+                        echo "task one stuff part 1"
+                        echo "task one stuff part 2"
+                        echo "task one stuff part 3"
+                    },
+                    "TaskTwo":{
+                        echo "task two stuff part 1"
+                        echo "task two stuff part 2"
+                        echo "task two stuff part 3"
+                    }
+                )
                 echo 'Testing..'
             }
         }
