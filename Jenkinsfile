@@ -25,7 +25,6 @@ pipeline {
                         echo "task two stuff part 3"
                     }
                 )
-                echo 'Testing..'
             }
         }
         stage('Deploy') {
